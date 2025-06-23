@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Story Prompt Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f8fc;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      color: #444;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .output {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e7f4ea;
+      border-left: 5px solid #4CAF50;
+      font-style: italic;
+      border-radius: 6px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Story Prompt Generator</h1>
+
+    <label for="genre">Select Genre</label>
+    <select id="genre">
+      <option>Fantasy</option>
+      <option>Sci-Fi</option>
+      <option>Romance</option>
+      <option>Horror</option>
+      <option>Mystery</option>
+      <option>Adventure</option>
+      <option>Comedy</option>
+      <option>Thriller</option>
+      <option>Dystopian</option>
+      <option>Historical</option>
+    </select>
+
+    <label for="theme">Select Theme</label>
+    <select id="theme">
+      <option>Betrayal</option>
+      <option>Hope</option>
+      <option>Identity</option>
+      <option>Revenge</option>
+      <option>Justice</option>
+      <option>Redemption</option>
+      <option>Freedom</option>
+      <option>Survival</option>
+      <option>Second Chances</option>
+      <option>Conspiracy</option>
+    </select>
+
+    <label for="character">Select Character Type</label>
+    <select id="character">
+      <option>Reluctant teenage warrior</option>
+      <option>Blind hacker detective</option>
+      <option>Disguised princess</option>
+      <option>Rogue AI engineer</option>
+      <option>Clumsy inventor</option>
+      <option>Ghost girl who protects a town</option>
+      <option>Undercover journalist</option>
+      <option>Nurse who hears voices</option>
+      <option>Botanist in Arctic expedition</option>
+      <option>Last dragon whisperer</option>
+    </select>
+
+    <button onclick="generatePrompt()">Generate Prompt</button>
+
+    <div id="output" class="output"></div>
+  </div>
+
+  <script>
+    function generatePrompt() {
+      const genre = document.getElementById("genre").value;
+      const theme = document.getElementById("theme").value;
+      const character = document.getElementById("character").value;
+
+      const prompt = `Generate a ${genre} story idea that explores the theme of "${theme}" and features a ${character} as the main character.`;
+
+      document.getElementById("output").innerText = prompt;
+    }
+  </script>
+</body>
+</html>
