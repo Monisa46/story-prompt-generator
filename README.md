@@ -20,6 +20,10 @@ Welcome to the Story Prompt Generator — a fun, interactive web tool that helps
 1. Clone the repo to Download files 
 2. Open `index.html` in your browser
 3. Start generating your next story idea!
+   
+ 🚀 Live Demo
+
+🔗 [Click here to try the Story Prompt Generator](https://monisa46.github.io/story-prompt-generator/)
 
 
 
